@@ -12,7 +12,7 @@ pipeline {
          }
          stage('Lint HTML') {
               steps {
-                  sh 'echo "Step 1"'
+                  sh 'tidy -q -e *.html'
               }
          }
          stage('Security Scan') {
